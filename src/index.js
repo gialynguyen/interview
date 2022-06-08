@@ -75,7 +75,7 @@ class Block {
     const blockTitle = this.renderTitle();
     container.append(blockTitle);
 
-    const children = (data || [])?.map((itemData, index) => {
+    const children = (data || []).map((itemData, index) => {
       const child = this.renderItem(itemData, index, state);
       if (this.options.afterRenderChild) {
         this.options.afterRenderChild(child, itemData, index);
