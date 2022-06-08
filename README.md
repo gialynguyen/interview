@@ -34,6 +34,8 @@ new AutoSuggestion(
        suggestionBlockOptions: BlockOptions // optional;
        collectionBlockOptions: BlockOptions // optional;
        productBlockOptions: BlockOptions // optional;
+       popupClassname: string; //optional
+       popupStyle: Object; // optional
     },
     //This will be called when the Search box has changed and its return value is a dataset that will be used to render the suggestion popup
     onSearch: (searchValue: string) => Promise;

@@ -202,6 +202,8 @@ class SuggestionPopup {
    * @property {BlockOptions} suggestionBlockOptions
    * @property {BlockOptions} collectionBlockOptions
    * @property {BlockOptions} productBlockOptions
+   * @property {string} popupClassname
+   * @property {Object} popupStyle
    *
    * @param {HTMLElement} searchInputElement
    * @param {SuggestionPopupOptions} options
@@ -244,6 +246,10 @@ class SuggestionPopup {
 
     if (this.options.popupClassname) {
       this.popupElm.classList.add(this.options.popupClassname);
+    }
+
+    if (this.options.popupStyle) {
+      Object.assign(this.popupElm.style, this.options.popupStyle);
     }
 
     const blocks = this.options.enabledBlocks.map((blockName) => {
