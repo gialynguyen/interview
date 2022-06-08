@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Suggestion</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <div id="app" class="w-full flex justify-center mt-2">
+      <input
+        id="text-search"
+        size="24"
+        class="border border-gray-400 outline-none p-1"
+      />
+    </div>
+
+    <script src="src/index.js"></script>
+    <script>
+      new AutoSuggestion(
+        document.getElementById("text-search"),
+        {
+          popupOptions: {},
+          onSearch: (searchValue) => {
+            return fetch(
+              "https://api.json-generator.com/templates/QB3tF5Tkmo4o/data",
+              {
+                headers: {
+                  Authorization:
+                    "Bearer sa7ti5u75ofr7pvi0kqglx3c3tdfk817lwcq97gs",
+                },
+              }
+            ).then((res) => res.json());
+          },
+        }
+      );
+    </script>
+  </body>
+</html>

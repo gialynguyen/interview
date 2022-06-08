@@ -1,0 +1,49 @@
+.block-title {
+    background-color: grey;
+    opacity: 0.6;
+    font-size: .7em;
+    padding: 5px 7px;
+}
+
+.block-item {
+    cursor: pointer;
+    font-size: .8rem;
+    padding: 5px 7px;
+    display: flex;
+    width: 100%;
+}
+
+.block-item:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.suggestion-block-item .text-highlight {
+    font-weight: bold;
+}
+
+.suggestion-popup {
+    margin-top: 10px;
+    min-width: 250px;
+    border: 1px solid gray;
+}
+
+.product-block-item {
+    display: flex;
+}
+
+.product-block-item .image {
+    margin-right: 8px;
+}
+
+.product-block-item .title {
+    font-weight: 500;
+}
+
+.product-block-item .brand {
+    font-size: .7rem;
+    font-weight: 200;
+}
+
+.product-block-item .price {
+    font-weight: 700;
+}
